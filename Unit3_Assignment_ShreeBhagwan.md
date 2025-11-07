@@ -1,5 +1,6 @@
 ## 🧠 SECTION A – Short Theory [15 Marks]
-
+## **Name : ** SHree bhagwan
+## **Enrollment number : ** 03513302723
 
 ### **Q1. DP Essentials**
 **Question:**  
