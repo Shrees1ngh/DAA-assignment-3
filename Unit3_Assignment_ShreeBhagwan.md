@@ -16,9 +16,10 @@ List the three ingredients of DP and one-line purpose of each.
 **Question:**  
 State two differences focusing on subproblem overlap and reuse; give one example for each.  
 
-Difference 1: DP has overlapping subproblems; D&C solves independent ones.
-Difference 2: DP reuses results; D&C recomputes them.
-Example: DP – Fibonacci; D&C – Merge Sort.
+**Answer:** 
+**Difference 1:** DP has overlapping subproblems; D&C solves independent ones.
+**Difference 2:** DP reuses results; D&C recomputes them.
+**Example:** DP – Fibonacci; D&C – Merge Sort.
 
 ---
 
@@ -74,26 +75,30 @@ Chain length = 1
 m[i,i] = 0 for i = 1 to 4
 
 Chain length = 2
-Pair	Formula	Calculation	Result
-(1,2)	5×4×6	120	m[1,2] = 120
-(2,3)	4×6×2	48	m[2,3] = 48
-(3,4)	6×2×7	84	m[3,4] = 84
+| Pair  | Formula | Calculation |    Result    |
+| :---- | :------ | :---------- | :----------: |
+| (1,2) | 5×4×6   | 120         | m[1,2] = 120 |
+| (2,3) | 4×6×2   | 48          |  m[2,3] = 48 |
+| (3,4) | 6×2×7   | 84          |  m[3,4] = 84 |
 
 Chain length = 3
-(i,j)	Possible k	  Formula	              Result
-(1,3)	k=1	          0 + 48 + 5×4×2 = 88	    88
-        k=2	          120 + 0 + 5×6×2 = 180 	180
-✅ m[1,3] = 88			
+| (i,j)             | Possible k | Formula               | Result |
+| :---------------- | :--------- | :-------------------- | :----: |
+| (1,3)             | k=1        | 0 + 48 + 5×4×2 = 88   |   88   |
+|                   | k=2        | 120 + 0 + 5×6×2 = 180 |   180  |
+| ✅ m[1,3] = **88** |            |                       |        |
+		
 
 | (2,4) | k=2 | 0 + 84 + 4×6×7 = 252 | 252 |
 | | k=3 | 48 + 0 + 4×2×7 = 104 | 104 |
 ✅ m[2,4] = 104
 
 Chain length = 4
-(1,4)	Possible k	      Formula	               Result
-        k=1	              0 + 104 + 5×4×7 = 244	     244	
-        k=2	              120 + 84 + 5×6×7 = 414	 414	
-        k=3	              88 + 0 + 5×2×7 = 158	     158	
+| (1,4) | Possible k   | Formula                 | Result |
+| :---- | :----------- | :---------------------- | :----: |
+|       |  k=1         | 0 + 104 + 5×4×7 = 244   |  244   |
+|       |  k=2         | 120 + 84 + 5×6×7 = 414  |  414   |
+|       |  k=3         | 88 + 0 + 5×2×7 = 158    | **158**|
 
 ✅ Minimum = 158
 
@@ -140,13 +145,15 @@ Base: e[i,i-1] = 0
 (b) Step-by-Step Calculation
 
 Step 1: Compute w[i,j]
-i	j	w[i,j]
-1	1	0.4
-2	2	0.3
-3	3	0.3
-1	2	0.7
-2	3	0.6
-1	3	1.0
+|  i  |  j  | w[i,j] |
+| :-: | :-: | :----: |
+|  1  |  1  |   0.4  |
+|  2  |  2  |   0.3  |
+|  3  |  3  |   0.3  |
+|  1  |  2  |   0.7  |
+|  2  |  3  |   0.6  |
+|  1  |  3  |   1.0  |
+
 
 Step 2: Length = 1
 
